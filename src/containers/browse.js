@@ -1,8 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 import React, { useContext, useState, useEffect } from "react";
+import Fuse from "fuse.js";
 import { SelectProfileContainer } from "./profiles";
 import { FirebaseContext } from "../context/firebase";
-import { Loading, Header, Card,Player } from "../components";
+import { FooterContainer } from "./footer";
+import { Loading, Header, Card, Player, Footer } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
@@ -25,6 +27,19 @@ export function BrowseContainer({ slides }) {
   useEffect(() => {
     setSlideRows(slides[category]);
   }, [slides, category]);
+
+  useEffect(() => {
+    const fuse = new Fuse(slideRows, {
+      keys: ["data.description", "data.genre", "data.title"],
+    });
+
+    const results = fuse.search(searchTerm).map(({ item }) => item);
+    if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+      setSlideRows(results);
+    } else {
+      setSlideRows(slides[category]);
+    }
+  }, [searchTerm]);
 
   const loadingComponent = loading ? (
     <Loading src={user.photoURL} />
@@ -103,13 +118,14 @@ export function BrowseContainer({ slides }) {
             </Card.Entities>
             <Card.Feature category={category}>
               <Player>
-                <Player.Button/>
-                <Player.Video src="/videos/bunny.mp4"/>
+                <Player.Button />
+                <Player.Video src="/videos/bunny.mp4" />
               </Player>
             </Card.Feature>
           </Card>
         ))}
       </Card.Group>
+      <FooterContainer />
     </>
   );
 
