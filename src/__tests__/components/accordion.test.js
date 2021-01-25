@@ -19,11 +19,10 @@ describe("<Accordion/>", () => {
 
     expect(getByText("Frequently Asked Questions")).toBeTruthy();
     expect(getByText("What is Netflix?")).toBeTruthy();
-    expect(getByText('How do I cancel?"')).toBeTruthy();
     expect(container.firstChild).toMatchSnapShot();
   });
 
-  it("opens and closes the <Accordio/> component", () => {
+  it("opens and closes the <Accordion/> component", () => {
     const { container, queryByText } = render(
       <Accordion>
         <Accordion.Title>Frequently Asked Questions</Accordion.Title>
@@ -41,5 +40,9 @@ describe("<Accordion/>", () => {
     expect(queryByText(netflixbody)).toBeFalsy();
     fireEvent.click(queryByText("What is Netflix?"));
     expect(queryByText(netflixbody)).toBeTruthy();
+
+    fireEvent.click(queryByText("What is Netflix?"));
+    expect(queryByText(netflixbody)).toBeFalsy();
+    expect(container.firstChild).toMatchSnapShot();
   });
 });
