@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Feature /> renders the <Feature /> with just a title 1`] = `
+<div
+  class="feature__Container-sc-6swrp6-0 dSpsdO"
+>
+  <h1
+    class="feature__Title-sc-6swrp6-2 gKbovD"
+  >
+    Unlimited films, TV programmes and more.
+  </h1>
+</div>
+`;
