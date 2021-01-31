@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,33 +112,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,30 +154,30 @@ import {
   Item,
 } from "./styles/jumbotron";
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >Jumbotron(</span>{ children, direction = <span class="branch-0 cbranch-no" title="branch not covered" >"row",</span> ...props }) {
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export default function Jumbotron({ children, direction = "row", ...props }) {
+  return (
     &lt;Item {...props}&gt;
       &lt;Inner direction={direction}&gt;{children}&lt;/Inner&gt;
     &lt;/Item&gt;
   );
 }
 &nbsp;
-Jumbotron.Container = function <span class="fstat-no" title="function not covered" >JumbotronContainer(</span>{ children, ...props }) {
-<span class="cstat-no" title="statement not covered" >  return &lt;Container {...props}&gt;{children}&lt;/Container&gt;;</span>
+Jumbotron.Container = function JumbotronContainer({ children, ...props }) {
+  return &lt;Container {...props}&gt;{children}&lt;/Container&gt;;
 };
-Jumbotron.Pane = function <span class="fstat-no" title="function not covered" >JumbotronPane(</span>{ children, ...props }) {
-<span class="cstat-no" title="statement not covered" >  return &lt;Pane {...props}&gt;{children}&lt;/Pane&gt;;</span>
+Jumbotron.Pane = function JumbotronPane({ children, ...props }) {
+  return &lt;Pane {...props}&gt;{children}&lt;/Pane&gt;;
 };
-Jumbotron.Title = function <span class="fstat-no" title="function not covered" >JumbotronTitle(</span>{ children, ...props }) {
-<span class="cstat-no" title="statement not covered" >  return &lt;Title {...props}&gt;{children}&lt;/Title&gt;;</span>
-};
-&nbsp;
-Jumbotron.SubTitle = function <span class="fstat-no" title="function not covered" >JumbotronSubTitle(</span>{ children, ...props }) {
-<span class="cstat-no" title="statement not covered" >  return &lt;SubTitle {...props}&gt;{children}&lt;/SubTitle&gt;;</span>
+Jumbotron.Title = function JumbotronTitle({ children, ...props }) {
+  return &lt;Title {...props}&gt;{children}&lt;/Title&gt;;
 };
 &nbsp;
-Jumbotron.Image = function <span class="fstat-no" title="function not covered" >JumbotronImage(</span>{ ...props }) {
-<span class="cstat-no" title="statement not covered" >  return &lt;Image {...props} /&gt;;</span>
+Jumbotron.SubTitle = function JumbotronSubTitle({ children, ...props }) {
+  return &lt;SubTitle {...props}&gt;{children}&lt;/SubTitle&gt;;
+};
+&nbsp;
+Jumbotron.Image = function JumbotronImage({ ...props }) {
+  return &lt;Image {...props} /&gt;;
 };
 &nbsp;
 // eslint-disable-next-line react/no-typos
@@ -192,7 +192,7 @@ Jumbotron.proptypes = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Jan 31 2021 15:44:46 GMT+0530 (India Standard Time)
+                at Sun Jan 31 2021 16:05:08 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>
